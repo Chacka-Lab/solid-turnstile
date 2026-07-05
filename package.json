@@ -1,7 +1,7 @@
 {
   "name": "@chacka-lab/solid-turnstile",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Cloudflare Turnstile's SolidJS encapsulation.",
   "homepage": "https://github.com/Chacka-Lab/solid-turnstile",
   "bugs": "https://github.com/Chacka-Lab/solid-turnstile/issues",

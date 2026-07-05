@@ -1,7 +1,7 @@
 {
   "name": "@chacka-lab/solid-turnstile",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cloudflare Turnstile's SolidJS encapsulation.",
   "homepage": "https://github.com/Chacka-Lab/solid-turnstile",
   "bugs": "https://github.com/Chacka-Lab/solid-turnstile/issues",
@@ -30,6 +30,9 @@
     }
   },
   "devDependencies": {
+    "@babel/core": "^8.0.1",
+    "@rolldown/plugin-babel": "^0.2.3",
+    "babel-preset-solid": "^1.9.12",
     "eslint": "^10.6.0",
     "eslint-config-prettier": "^10.1.8",
     "jiti": "^2.7.0",

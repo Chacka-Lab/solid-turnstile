@@ -1,0 +1,15 @@
+# deps
+node_modules/
+
+# misc
+.DS_Store
+.idea/
+
+# debug
+.pnpm-debug.log*
+
+# typescript
+*.tsbuildinfo
+
+# generated
+dist/

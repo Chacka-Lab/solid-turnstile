@@ -1,0 +1,58 @@
+{
+  "name": "@chacka-lab/solid-turnstile",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Cloudflare Turnstile's SolidJS encapsulation.",
+  "homepage": "https://github.com/Chacka-Lab/solid-turnstile",
+  "bugs": "https://github.com/Chacka-Lab/solid-turnstile/issues",
+  "license": "MIT",
+  "keywords": [
+    "turnstile",
+    "solidjs",
+    "cloudflare",
+    "captcha",
+    "component"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "check": "tsc --noEmit",
+    "lint": "eslint --fix .",
+    "format": "prettier --write ."
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=11",
+      "onFail": "download"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "jiti": "^2.7.0",
+    "prettier": "^3.8.3",
+    "tsdown": "^0.22.3",
+    "turnstile-types": "^1.2.3",
+    "typescript": "^6.0.0",
+    "typescript-eslint": "^8.62.1"
+  },
+  "peerDependencies": {
+    "solid-js": ">=1.8.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/component.mjs",
+      "types": "./dist/component.d.mts"
+    },
+    "./validate": {
+      "import": "./dist/validate.mjs",
+      "types": "./dist/validate.d.mts"
+    }
+  }
+}

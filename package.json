@@ -46,14 +46,25 @@
     "solid-js": ">=1.8.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "exports": {
     ".": {
+      "solid": "./src/component.tsx",
+      "node": {
+        "import": "./dist/server/component.mjs",
+        "types": "./dist/component.d.mts"
+      },
+      "worker": {
+        "import": "./dist/server/component.mjs",
+        "types": "./dist/component.d.mts"
+      },
       "import": "./dist/component.mjs",
       "types": "./dist/component.d.mts"
     },
     "./validate": {
+      "solid": "./src/validate.ts",
       "import": "./dist/validate.mjs",
       "types": "./dist/validate.d.mts"
     }

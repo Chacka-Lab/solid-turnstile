@@ -1,4 +1,4 @@
-import { createEffect, createSignal, onCleanup, type JSX } from 'solid-js';
+import { createEffect, createSignal, onCleanup, onMount, type JSX } from 'solid-js';
 import { withResolvers } from './polyfill';
 import type {
   TurnstileObject,
@@ -185,7 +185,12 @@ export interface BoundTurnstileObject {
  */
 export default function Turnstile(props: TurnstileProps) {
   // DOM node that the Turnstile SDK mounts into.
-  let containerRef: HTMLDivElement;
+  // Plain variable ref avoids `use` in compiled output (SSR-compatible).
+  let containerRef!: HTMLDivElement;
+
+  // Forward the ref to the consumer after mount. `onMount` is a no-op in SSR,
+  // which is fine because Turnstile is a DOM-only widget.
+  onMount(() => props.ref?.(containerRef));
 
   // -------------------------------------------------------------------------
   // Widget lifecycle.
@@ -276,10 +281,7 @@ export default function Turnstile(props: TurnstileProps) {
 
   return (
     <div
-      ref={(el) => {
-        containerRef = el;
-        props.ref?.(el);
-      }}
+      ref={containerRef}
       id={props.id}
       class={props.class}
       style={

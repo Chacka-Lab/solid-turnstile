@@ -1,4 +1,4 @@
-# solid-turnstile
+# @chacka-lab/solid-turnstile
 
 A simple SolidJS library for [Cloudflare Turnstile](https://challenges.cloudflare.com).
 
